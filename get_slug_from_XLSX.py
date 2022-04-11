@@ -96,16 +96,7 @@ for i in range(2, 920):
     """
 
     new_list_value = key
-
     list1.append(new_list_value)
-
-    
-    """
-    if key in myDict:
-        continue
-    else:
-        myDict[key] = value
-    """
 
 #if you do want a unique list with no duplicates, remember to remove square brackets from above
 unique_list = list(dict.fromkeys(list1))

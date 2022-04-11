@@ -16,27 +16,3 @@ with open('biz_collection_au_full.csv', 'r', encoding="utf8") as read_obj:
 unique_set = set(list1)
 unique_list = list(unique_set)
 print(unique_list)
-
-
-
-# # load excel with its path
-# wrkbk = openpyxl.load_workbook("biz_collection_au_full.csv")
-
-# sh = wrkbk.active
-    
-# list1 = []
-  
-# # iterate through excel and display data
-# for i in range(2, sh.max_row+1):
-#     print("\n")
-#     print("Row ", i, " data :")
-#     cell_obj = sh.cell(row=i, column=1)
-#     # slash_index = cell_obj.value.index('/')
-#     # product_code = cell_obj.value[:slash_index].strip()
-#     # list1.append(product_code)
-#     # print(cell_obj.value.split()[0])
-#     print(cell_obj.value)
-
-# # unique_set = set(list1)
-# # unique_list = list(unique_set)
-# # print(unique_list)

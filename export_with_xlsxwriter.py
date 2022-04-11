@@ -1,7 +1,7 @@
 import xlsxwriter
 
 # Create a workbook and add a worksheet.
-workbook = xlsxwriter.Workbook('Products_in_database_with_MSRP.xlsx')
+workbook = xlsxwriter.Workbook('Product_codes.xlsx')
 worksheet = workbook.add_worksheet()
 
 # Some data we want to write to the worksheet.
@@ -14,7 +14,7 @@ col = 0
 
 # Iterate over the data and write it out row by row.
 for item in expenses:
-    worksheet.write(row, col,     item)
+    worksheet.write(row, col, item)
     row += 1
 
 workbook.close()
