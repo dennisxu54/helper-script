@@ -18,7 +18,7 @@ for i in range(2, 920):
     print("Row ", i, " data :")
       
     cell_product_size_name = sh.cell(row=i, column=2).value
-    if cell_product_slug == " " or cell_product_slug == None or cell_product_slug == "-":
+    if cell_product_size_name == " " or cell_product_size_name == None or cell_product_size_name == "-":
         continue
     print(cell_product_size_name)
     key = str(cell_product_size_name)
@@ -59,6 +59,9 @@ for i in range(2, 920):
     if "chest" in key:
         key = key.replace("chest", "Chest")
 
+    list1.append(key)
+
+    """
     size_list = []
     index = 0
     for x in range(3, 45):
@@ -72,12 +75,12 @@ for i in range(2, 920):
 
     cell_product_slug = sh.cell(row=i, column=1).value
     slug = str(cell_product_slug).lower() 
-    slug = str(cell_product_slug)
         
     myDict = {"size_details": size_list}
-    list1.append([key, size_list])
+    list1.append([slug, key, myDict])
+    """
 
 #if you do want a unique list with no duplicates
-#unique_list = list(dict.fromkeys(list1))
-#print(unique_list)
-print(list1)
+unique_list = list(dict.fromkeys(list1))
+print(unique_list)
+#print(list1)
