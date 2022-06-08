@@ -44,6 +44,8 @@ for i in range(2, 920):
         key = key.replace("  (CM)", " (CM)")
     if "1/2" in key:
         key = key.replace("1/2", "½")
+    if "chest" in key:
+        key = key.replace("chest", "Chest")
         
     if "Outleg From Waist (CM)" in key:
         key = "Outer Leg (cm)"
@@ -56,8 +58,7 @@ for i in range(2, 920):
         
     if "(CM)" in key:
         key = key.replace("(CM)", "(cm)")
-    if "chest" in key:
-        key = key.replace("chest", "Chest")
+    
 
     list1.append(key)
 

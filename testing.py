@@ -3,7 +3,7 @@ sizes = ["XXS", "XS", "S", "M", "L", "XL", "2XL", "3XL", "4XL", "5XL", "6XL", "7
 
 list1 = []
 
-random_list = ["20", "72", "XXS"]
+random_list = ["10", "12", "20", "22", "24", "26", "8", "6", "14"]
 
 for x in range(len(random_list)):
     list1.insert(sizes.index(random_list[x]), random_list[x])
