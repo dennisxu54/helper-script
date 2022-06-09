@@ -3,7 +3,7 @@ import openpyxl
 import math
   
 # load excel with its path
-wrkbk = openpyxl.load_workbook("2022 Syzmik - Priceslist AUS.xlsx", data_only=True)
+wrkbk = openpyxl.load_workbook("2022 Syzmik - Priceslist NZ.xlsx", data_only=True)
 
 # Make sure the sheet name is same as on the excel
 sh = wrkbk["Syzmik"]
@@ -17,7 +17,9 @@ for i in range(9, 202):
     print("Row ", i, " data :")
       
     cell_product_slug = sh.cell(row=i, column=1).value
-    if cell_product_slug == " " or cell_product_slug == None or cell_product_slug == "engineered outerwear" or cell_product_slug == "Style":
+    if cell_product_slug == " " or cell_product_slug == None or cell_product_slug == "Style":
+        continue
+    if cell_product_slug == "WORKS PANTS & SHORTS" or cell_product_slug == "ENGINEERED OUTERWEAR" or cell_product_slug == "OVERALLS" or cell_product_slug == "FIRE ARMOUR":
         continue
     print(cell_product_slug)
     pro_slug = cell_product_slug.strip()
