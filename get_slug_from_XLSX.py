@@ -3,7 +3,7 @@ import openpyxl
 import math
   
 # load excel with its path
-wrkbk = openpyxl.load_workbook("Biz Collection - Product Details _Jodi.xlsx", data_only=True)
+wrkbk = openpyxl.load_workbook("Biz Collection - Product Details _Jodi_14.09.2022.xlsx", data_only=True)
 
 # Make sure the sheet name is same as on the excel
 sh = wrkbk["HEALTH & BEAUTY"]
@@ -12,7 +12,7 @@ list1 = []
 myDict = {}
   
 # iterate through excel and display data
-for i in range(2, 15):
+for i in range(2, 120):
     print("\n")
     print("Row ", i, " data :")
       
@@ -34,6 +34,7 @@ for i in range(2, 15):
     #key = str(cell_product_slug).lower() 
     #key = str(cell_product_slug)
 
+    name = sh.cell(row=i, column=2).value
     description = sh.cell(row=i, column=3).value
     description = description.replace('\n',"")
     fabric = sh.cell(row=i, column=5).value
@@ -44,6 +45,7 @@ for i in range(2, 15):
     size_model = sh.cell(row=i, column=10).value
     size_height = sh.cell(row=i, column=11).value
     features = sh.cell(row=i, column=12).value
+    feature_icon = sh.cell(row=i, column=13).value
     """
     cell_tier_price1 = cell_tier_price1.lower()
     cell_tier_price2 = sh.cell(row=i, column=8).value
@@ -65,7 +67,7 @@ for i in range(2, 15):
         features = ""
     """
     
-    new_list_value = [pro_slug, description, fabric, fabric_feature, fabric_care, size_range, size_fit, size_model, size_height, features]
+    new_list_value = [pro_slug, name, description, fabric, fabric_feature, fabric_care, size_range, size_fit, size_model, size_height, features, feature_icon]
     list1.append(new_list_value)
 
 #if you do want a unique list with no duplicates, remember to remove square brackets from above
