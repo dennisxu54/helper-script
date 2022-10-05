@@ -3,7 +3,7 @@ import openpyxl
 import math
   
 # load excel with its path
-wrkbk = openpyxl.load_workbook("Biz Collection - Sizing.xlsx", data_only=True)
+wrkbk = openpyxl.load_workbook("Copy of Biz Collection - Sizing.xlsx", data_only=True)
 
 sh = wrkbk["Sheet1"]
 
@@ -13,12 +13,12 @@ list1 = []
 myDict = {}
    
 # iterate through excel and display data
-for i in range(2, 980):
+for i in range(600, 980):
     print("\n")
     print("Row ", i, " data :")
       
     cell_product_size_name = sh.cell(row=i, column=2).value
-    if cell_product_size_name == " " or cell_product_size_name == None or cell_product_size_name == "-":
+    if cell_product_size_name == " " or cell_product_size_name == None or cell_product_size_name == "-" or cell_product_size_name == "":
         continue
     print(cell_product_size_name)
     key = str(cell_product_size_name)
@@ -62,9 +62,6 @@ for i in range(2, 980):
         
     if "(CM)" in key:
         key = key.replace("(CM)", "(cm)")
-    
-
-    #list1.append(key)
 
 
     size_list = []
