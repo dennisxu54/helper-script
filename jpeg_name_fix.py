@@ -39,7 +39,7 @@ for file in os.listdir(folder_path):
     if rename_item.lower() == "talent":
         replace_rename_item = "aTalent"
     elif rename_item.lower() == "product":
-        replace_rename_item = "bPorduct"
+        replace_rename_item = "bProduct"
     else:
         continue
     slug_list.append(file_name_list[0])
