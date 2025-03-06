@@ -3,16 +3,16 @@ import openpyxl
 import math
   
 # load excel with its path
-wrkbk = openpyxl.load_workbook("2023 Biz Corporates - Pricelist Distributor AUS.xlsx", data_only=True)
+wrkbk = openpyxl.load_workbook("2024 Biz Corporates - Pricelist Reseller AU_September.xlsx", data_only=True)
 
 # Make sure the sheet name is same as on the excel
-sh = wrkbk["Biz Corporates AUS"]
+sh = wrkbk["Biz Corporates AU"]
 
 list1 = []
 myDict = {}
   
 # iterate through excel and display data
-for i in range(6, 130):
+for i in range(7, 136):
     print("\n")
     print("Row ", i, " data :")
     category_name = [" ", "Style", "STYLE", "WORKS PANTS & SHORTS", "ENGINEERED OUTERWEAR", "OVERALLS", "FIRE ARMOUR", "POLOS", "TEES", 
@@ -33,6 +33,8 @@ for i in range(6, 130):
     pro_slug = pro_slug.lower()
 
     price1 = sh.cell(row=i, column=6).value
+    if price1 == None:
+        continue
     price1 = str(price1)
     if '$' in price1:
         price1 = price1.replace('$', '')
