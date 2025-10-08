@@ -35,22 +35,26 @@ for i in range(2, 205):
     #key = str(cell_product_slug)
 
     name = sh.cell(row=i, column=4).value
-    size_range = sh.cell(row=i, column=6).value
-    size_fit = sh.cell(row=i, column=7).value
-    feature_icon = sh.cell(row=i, column=8).value
-    description = sh.cell(row=i, column=9).value
+    size_range = sh.cell(row=i, column=7).value
+    # ca_size_range = sh.cell(row=i, column=8).value
+    size_fit = sh.cell(row=i, column=9).value
+    feature_icon = sh.cell(row=i, column=10).value
+    description = sh.cell(row=i, column=11).value
     if description != None:
         description = description.replace('\n',"")
-    fabric = sh.cell(row=i, column=10).value
-    feature = sh.cell(row=i, column=11).value
-    fabric_care = sh.cell(row=i, column=12).value
-    size_model = sh.cell(row=i, column=13).value
-    size_height = sh.cell(row=i, column=14).value
-    sleeve_length = sh.cell(row=i, column=16).value
-    fabric_type = sh.cell(row=i, column=17).value
-    garment_type = sh.cell(row=i, column=18).value
-    sub_brand = sh.cell(row=i, column=19).value
-    feature_color = sh.cell(row=i, column=20).value
+    fabric = sh.cell(row=i, column=12).value
+    # ca_fabric = sh.cell(row=i, column=13).value
+    feature = sh.cell(row=i, column=14).value
+    fabric_care = sh.cell(row=i, column=15).value
+    size_model = sh.cell(row=i, column=16).value
+    # ca_size_model = sh.cell(row=i, column=17).value
+    size_height = sh.cell(row=i, column=18).value
+    sleeve_length = sh.cell(row=i, column=20).value
+    fabric_type = sh.cell(row=i, column=21).value
+    garment_type = sh.cell(row=i, column=22).value
+    sub_brand = sh.cell(row=i, column=23).value
+    feature_color = sh.cell(row=i, column=24).value
+    # ca_feature_color = sh.cell(row=i, column=25).value
     #value = [cell_tier_price, cell_tier_price*2]
     #print(value)
     """
